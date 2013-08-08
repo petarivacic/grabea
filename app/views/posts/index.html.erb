@@ -1,25 +1,38 @@
-<h1>Listing posts</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="page-header">
+<h2>All Gigs</h2>
+</div>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.tag %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="container">
+<div class"row">
+  <div class ="span 3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Messages</a></li>
+    </ul>
+  </div>
 
-<br />
+  <div class ="span 6"><% @posts.each do |post| %>
+  
+    <div class="post">
+      <strong><%= post.user.full_name %></strong>
+      <p><%= post.content %></p>
+      <div class="meta">
+      </div>
+    </div>
+  
+  <%end%></div>
 
-<%= link_to 'New Post', new_post_path %>
+  <div class ="span 3 pull-right">
+    <%= link_to "Post a Job", new_post_path, class: "pull-right btn btn-success" %>
+  </div>
+
+</div>
+</div>
+
+<br>
+
+
+
+

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
   # GET /posts
   # GET /posts.json
   def index
@@ -40,7 +41,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = current_user.posts.new(params[:post])
 
     respond_to do |format|
       if @post.save
@@ -56,7 +57,10 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
+    if params[:post] && params[:post].has_key?(:user_id)
+      params[:status].delete(:user_id)
+    end
 
     respond_to do |format|
       if @post.update_attributes(params[:post])

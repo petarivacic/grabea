@@ -8,7 +8,12 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :profile_name
 
 
-  has_many :statuses
+  has_many :posts
+
+  def full_name
+  	first_name + " " + last_name
+  end
+  
 
   
 end
