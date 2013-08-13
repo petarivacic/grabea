@@ -2,6 +2,8 @@ Wjobs::Application.routes.draw do
 
   
   
+  get "admin/new"
+
   resources :posts
   match '/profile',    to: 'users#show'
 
