@@ -13,6 +13,7 @@ Wjobs::Application.routes.draw do
 
   get "users/show"
   devise_for :users
+  resources :users
 
   root :to => "static_pages#home"  
   get "static_pages/help"
