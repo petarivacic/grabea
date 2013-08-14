@@ -4,7 +4,9 @@ gem 'rails', '3.2.9'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form'
-
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
