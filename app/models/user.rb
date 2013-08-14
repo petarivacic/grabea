@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
 
   has_many :posts
+  has_many :microposts, dependent: :destroy
 
   def full_name
   	first_name + " " + last_name

@@ -1,6 +1,6 @@
 Wjobs::Application.routes.draw do
 
-  
+  resources :microposts, only: [:create, :destroy]
   
   get "admin/new"
 

@@ -1,10 +1,24 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+
+<% else %>
 <% provide(:title, 'Home') %>
-<div class="hero-unit">
+<div class="center hero-unit">
   <h1>Find Vork</h1>
 
 <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
   <%= link_to "Sign up", new_user_registration_path, class: "btn btn-large btn-primary" %>
 </div>
+<% end %>
 
 
 

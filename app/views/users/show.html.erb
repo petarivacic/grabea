@@ -1,3 +1,22 @@
-<%= image_tag @user.gravatar_url, style: "width: 50px; height: 50px;",  class: "img-rounded"  %>
-<h3><%= @user.full_name %></h3>
-<p><%= @user.email %></p>
+<% provide(:title, @user.full_name) %>
+<div class="row">
+
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.full_name %>
+      </h1>
+    </section>
+  </aside>
+  
+  <div class="span8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div
