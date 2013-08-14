@@ -1,8 +1,9 @@
 Wjobs::Application.routes.draw do
 
-  resources :microposts, only: [:create, :destroy]
+  root :to => "static_pages#home"
+
   
-  get "admin/new"
+  
 
   resources :posts
   match '/profile',    to: 'users#show'
@@ -14,8 +15,9 @@ Wjobs::Application.routes.draw do
   get "users/show"
   devise_for :users
   resources :users
+  resources :microposts, only: [:create, :destroy]
+  root :to => "static_pages#home"
 
-  root :to => "static_pages#home"  
   get "static_pages/help"
   get "static_pages/about"
   get "static_pages/contact"

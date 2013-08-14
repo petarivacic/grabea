@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{hash}"
   end
 
+  def feed
+    microposts
+  end
+
   
 
   
