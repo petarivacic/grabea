@@ -1,6 +1,7 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
+    
     99.times do |n|
       first_name  = Faker::Name.first_name
       last_name = Faker::Name.last_name
@@ -12,6 +13,7 @@ namespace :db do
                    password: password,
                    password_confirmation: password)
     end
+
     users = User.all(limit: 6)
     50.times do
       content = Faker::Lorem.sentence(5)
@@ -19,4 +21,5 @@ namespace :db do
     end
 
   end
+  
 end
