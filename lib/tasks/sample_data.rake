@@ -9,6 +9,12 @@ namespace :db do
                  password_confirmation: "Beograd1",
                  bio: content,
                  tag_line: content)
+    users = User.all(limit: 6)
+    5.times do  
+      users.each { |user| user.skills.create!( type: "skill" )}
+    end
+
+
     
     #99.times do |n|
      # first_name  = Faker::Name.first_name
