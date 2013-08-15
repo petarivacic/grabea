@@ -3,14 +3,35 @@
 
   <aside class="span4">
     <section>
+      <%= gravatar_for @user %> 
+    </section>
+    
+    <section>
       <h1>
-        <%= gravatar_for @user %>
         <%= @user.full_name %>
       </h1>
+      <div class="tag_line"><%= @user.tag_line %></div>
+    </section>
+    <section>
+      <strong>About me:</strong>
+      <div class="bio"><%= @user.bio %></div>
+    </section>
+
+    <section>
+      <strong>I'm really good at:</strong>
+      <div>
+        <span class="label">Lean Thinking</span>
+        <span class="label label-success">Ruby on Rails</span>
+        <span class="label label-warning">Moving Furniture</span>
+        <span class="label label-important">Creative Problem Solving</span>
+        <span class="label label-info">Java</span>
+        <span class="label label-inverse">Immigration Law</span>
+      </div>
     </section>
   </aside>
   
   <div class="span8">
+    
     <% if @user.microposts.any? %>
       <h3>Activity (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
