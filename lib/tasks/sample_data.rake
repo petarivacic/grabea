@@ -11,7 +11,7 @@ namespace :db do
                  tag_line: content)
     users = User.all(limit: 6)
     5.times do  
-      users.each { |user| user.skills.create!( type: "skill" )}
+      users.each { |user| user.skills.create!( skill_type: "skill" )}
     end
 
 

@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130815081450) do
+ActiveRecord::Schema.define(:version => 20130817011544) do
+
+  create_table "educations", :force => true do |t|
+    t.string   "university_name"
+    t.integer  "graduation_date"
+    t.boolean  "graduated"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "experiences", :force => true do |t|
+    t.string   "company"
+    t.string   "position"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -31,12 +48,14 @@ ActiveRecord::Schema.define(:version => 20130815081450) do
   end
 
   create_table "skills", :force => true do |t|
-    t.string   "type"
+    t.string   "skill_type"
     t.integer  "score"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "skills", ["user_id", "score"], :name => "index_skills_on_user_id_and_score"
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

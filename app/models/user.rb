@@ -10,8 +10,9 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :microposts, dependent: :destroy
-  has_many :skills
-
+  has_many :skills, dependent: :destroy
+  has_many :educations
+  has_many :experiences
   def full_name
   	first_name + " " + last_name
   end
