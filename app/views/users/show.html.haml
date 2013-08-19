@@ -1,0 +1,40 @@
+- provide(:title, @user.full_name)
+.media
+  = gravatar_for @user
+%br
+.row
+  %aside.span3
+    %section
+      %h1= @user.full_name
+      .tag_line= @user.tag_line
+    %section
+      %strong I'm really good at:
+      %div
+        = render @skills
+  %bside.span8
+    .tabbable
+      / Only required for left/right tabs
+      %ul.nav.nav-pills
+        %li.active
+          %a{"data-toggle" => "tab", :href => "#tab1"} About Me
+        %li
+          %a{"data-toggle" => "tab", :href => "#tab2"}
+            Activity(#{@user.microposts.count})
+      .tab-content
+        #tab1.tab-pane.active
+          %strong Bio:
+          .bio= @user.bio
+          
+          %hr/
+          
+          %strong Education:
+          %div= render @educations
+          %hr/
+          %section
+            %strong Experience:
+            %ul= render @experiences
+        #tab2.tab-pane
+          - if @user.microposts.any?
+            %ol.microposts
+              = render @microposts
+            = will_paginate @microposts
