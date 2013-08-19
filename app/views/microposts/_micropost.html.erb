@@ -2,5 +2,7 @@
   <span class="content"><%= micropost.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  </span>
+    <%= link_to "Upvote #{micropost.likes.size}", {:controller =>"microposts", :action => "upvote", :id => micropost.id}, :class => 'btn', method: :put %>
+	<%= link_to "Downvote", {:controller =>"microposts", :action => "downvote", :id => micropost.id}, :class => 'btn', method: :put %>
+    </span>
 </li>

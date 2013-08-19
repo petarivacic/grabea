@@ -1,3 +1,10 @@
-
-%h1 Contact
-%p Contact page
+.thumbnail.center.well.well-small.text-center
+  %h2 Sign Up for our Beta Launch
+  %p Fill out our quick and short form so we can notify you as soon as Instamour launches. We will only be accepting the first 2,000 users that sign up for our beta launch so get your info to us as soon as possible to ensure you are a part of the first version!
+  %form{:action => "", :method => "post"}
+    .input-prepend
+      %span.add-on
+        %i.icon-envelope
+      %input{:id => "", :name => "", :placeholder => "your@email.com", :type => "text"}/
+    %br/
+    %input.btn.btn-large{:type => "submit", :value => "Subscribe Now!"}/

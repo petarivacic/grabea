@@ -20,6 +20,21 @@ class MicropostsController < ApplicationController
   
   end
 
+  def upvote
+    
+    @micropost = Micropost.find(params[:id])
+    @micropost.liked_by current_user
+    @micropost.likes.size
+    redirect_to :back
+    
+  end
+
+  def downvote
+    @micropost = Micropost.find(params[:id])
+    @micropost.downvote_from current_user
+    redirect_to :back                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  end
+
 
 
 end

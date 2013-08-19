@@ -8,10 +8,11 @@
       %h1= @user.full_name
       .tag_line= @user.tag_line
     %section
-      %strong I'm really good at:
+      %strong I'm good at:
       %div
         = render @skills
   %bside.span8
+    = render 'follow_form' 
     .tabbable
       / Only required for left/right tabs
       %ul.nav.nav-pills
@@ -20,19 +21,25 @@
         %li
           %a{"data-toggle" => "tab", :href => "#tab2"}
             Activity(#{@user.microposts.count})
+
       .tab-content
         #tab1.tab-pane.active
+          
+          %bio
           %strong Bio:
           .bio= @user.bio
           
           %hr/
           
-          %strong Education:
-          %div= render @educations
+          %education
+            %strong Education:
+            %div= render @educations
           %hr/
-          %section
+          
+          %experience 
             %strong Experience:
             %ul= render @experiences
+
         #tab2.tab-pane
           - if @user.microposts.any?
             %ol.microposts
