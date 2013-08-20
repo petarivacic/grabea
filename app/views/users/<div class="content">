@@ -1,0 +1,187 @@
+<div class="content">
+
+      
+      
+
+      
+      <div class="stream-item-header">
+          <a class="account-group js-account-group js-action-profile js-user-profile-link js-nav" href="/EntMagazine" data-user-id="19407053">
+    <img class="avatar js-action-profile-avatar" src="https://si0.twimg.com/profile_images/1847191518/twitter_profile_new_normal.png" alt="">
+    <strong class="fullname js-action-profile-name show-popup-with-id">Entrepreneur</strong>
+    <span>‏</span><span class="username js-action-profile-name"><s>@</s><b>EntMagazine</b></span>
+    
+  </a>
+
+        <small class="time">
+    <a href="/EntMagazine/status/369678955181539328" class="tweet-timestamp js-permalink js-nav" title="9:35 PM - 19 Aug 13"><span class="_timestamp js-short-timestamp js-relative-timestamp" data-time="1376973305" data-long-form="true">4m</span></a>
+</small>
+
+      </div>
+
+      
+
+      <p class="js-tweet-text tweet-text">While app store optimization is vital in marketing your app, it's barely used. Make it work for you <a href="http://t.co/gSsiezKz46" rel="nofollow" dir="ltr" data-expanded-url="http://entm.ag/14R0JTh" class="twitter-timeline-link" target="_blank" title="http://entm.ag/14R0JTh"><span class="tco-ellipsis"></span><span class="invisible">http://</span><span class="js-display-url">entm.ag/14R0JTh</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a></p>
+
+
+      
+      <div class="stream-item-footer">
+        
+        
+
+<div class="context">
+</div>
+
+
+          
+<a class="details with-icn js-details" href="/EntMagazine/status/369678955181539328">
+  <span class="details-icon js-icon-container">
+    
+  </span>
+  <b>
+    <span class="expand-stream-item js-view-details">
+      
+        <span class="expand-action-wrapper">
+          Expand
+        </span>
+    </span>
+    <span class="collapse-stream-item js-hide-details">
+      Collapse
+    </span>
+  </b>
+</a>
+
+
+          
+          
+
+<ul class="tweet-actions js-actions">
+  <li class="action-reply-container">
+    <a role="button" class="with-icn js-action-reply js-tooltip" data-modal="tweet-reply" href="#">
+      <span class="icon sm-reply"></span>
+      <b>Reply</b>
+    </a>
+  </li>
+  <li class="action-rt-container js-toggle-state js-toggle-rt">
+    <a role="button" class="with-icn retweet js-tooltip" data-modal="tweet-retweet" href="#">
+      <span class="icon sm-rt"></span>
+      <b>Retweet</b>
+    </a>
+    <a role="button" class="with-icn undo-retweet js-tooltip" data-modal="tweet-retweet" href="#">
+      <span class="icon sm-rt"></span>
+      <b>Retweeted</b>
+    </a>
+  </li>
+  <li class="action-del-container">
+    <a role="button" class="with-icn js-action-del js-tooltip" href="#">
+      <span class="icon sm-trash"></span>
+      <b>Delete</b>
+    </a>
+  </li>
+  <li class="action-fav-container js-toggle-state js-toggle-fav">
+    <a role="button" class="with-icn favorite js-tooltip" href="#">
+      <span class="icon sm-fav"></span>
+      <b>Favorite</b>
+    </a>
+    <a role="button" class="with-icn unfavorite js-tooltip" href="#">
+      <span class="icon sm-fav"></span>
+      <b>Favorited</b>
+    </a>
+  </li>
+
+  
+  <li class="more-tweet-actions">
+  <div class="action-more-container">
+    <div class="dropdown">
+      <button type="button" class="btn-link with-icn dropdown-toggle js-tooltip">
+        <i class="icon sm-more"></i>
+        <b>More</b>
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-caret">
+          <span class="caret-outer"></span>
+          <span class="caret-inner"></span>
+        </li>
+        <li class="share-via-email">
+          <a class="js-share-via-email" href="#" data-nav="share_tweet">Share via email</a>
+        </li>
+          <li class="embed-link">
+            <a class="js-embed-tweet" href="#" data-nav="embed_tweet">Embed Tweet</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+  
+</ul>
+
+      </div>
+
+      
+      
+
+<div class="expanded-content js-tweet-details-dropdown">
+    
+    
+    
+
+    
+</div>
+
+
+    </div>
+
+element.style {
+}
+Matched CSS Rules
+.stream-item .content, .permalink-tweet .content {
+margin-left: 58px;
+}
+user agent stylesheetdiv {
+display: block;
+}
+Inherited from div.tweet.original-tweet.js-stream-tweet.js-actionable-tweet.js-profile-popup-actionable.js-original-tweet
+.tweet {
+cursor: pointer;
+}
+Inherited from li#stream-item-tweet-369678955181539328.js-stream-item.stream-item.expanding-stream-item
+.in-reply-to>ol>li, li.stream-item, .tweets-wrapper li, .recent-tweets li {
+line-height: inherit;
+}
+.in-reply-to>ol>li, li.stream-item, .tweets-wrapper li, .recent-tweets li {
+line-height: inherit;
+}
+ol>li {
+line-height: 20px;
+}
+user agent stylesheetli {
+text-align: -webkit-match-parent;
+}
+Inherited from ol#stream-items-id.stream-items.js-navigable-stream
+.stream, .stream-items {
+list-style: none;
+}
+ol {
+list-style: decimal;
+}
+user agent stylesheetol {
+list-style-type: decimal;
+}
+Inherited from div.stream.home-stream
+.stream, .stream-items {
+list-style: none;
+}
+Inherited from body.t1.logged-in.user-style-petarivacic.supports-drag-and-drop
+body, label, input, textarea, select, button {
+font-family: "Helvetica Neue",Arial,sans-serif;
+}
+body {
+color: #333;
+font-size: 14px;
+line-height: 18px;
+}
+

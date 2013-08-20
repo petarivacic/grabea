@@ -1,18 +1,17 @@
 - provide(:title, @user.full_name)
-.media
-  = gravatar_for @user
-%br
 .row
-  %aside.span3
+  %aside.span4
+    =render 'users/user_info'
     %section
-      %h1= @user.full_name
       .tag_line= @user.tag_line
     %section
-      %strong I'm good at:
+       
+    %section
+      = render 'shared/stats'
+      %strong Skills:
       %div
         = render @skills
   %bside.span8
-    = render 'follow_form' 
     .tabbable
       / Only required for left/right tabs
       %ul.nav.nav-pills
