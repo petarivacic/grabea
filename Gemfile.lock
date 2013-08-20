@@ -174,7 +174,7 @@ DEPENDENCIES
   haml
   jquery-rails
   pg
-  rails (= 3.2.9)
+  rails (~> 3.2.0.rc2)
   rspec-rails (= 2.9.0)
   sass-rails (~> 3.2.3)
   simple_form
