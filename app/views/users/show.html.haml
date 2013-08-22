@@ -2,12 +2,11 @@
 .row
   %aside.span4
     =render 'users/user_info'
-    %section
-      .tag_line= @user.tag_line
-    %section
-       
+    =render 'users/tagline'
+   
     %section
       = render 'shared/stats'
+    %section
       %strong Skills:
       %div
         = render @skills
@@ -16,14 +15,18 @@
       / Only required for left/right tabs
       %ul.nav.nav-pills
         %li.active
-          %a{"data-toggle" => "tab", :href => "#tab1"} About Me
+          %a{"data-toggle" => "tab", :href => "#tab1"} Activity(#{@user.microposts.count})
         %li
-          %a{"data-toggle" => "tab", :href => "#tab2"}
-            Activity(#{@user.microposts.count})
+          %a{"data-toggle" => "tab", :href => "#tab2"} Background
+            
 
       .tab-content
         #tab1.tab-pane.active
-          
+          - if @user.microposts.any?
+            %ol.microposts
+              = render @microposts
+            = will_paginate @microposts    
+        #tab2.tab-pane
           %bio
           %strong Bio:
           .bio= @user.bio
@@ -39,8 +42,3 @@
             %strong Experience:
             %ul= render @experiences
 
-        #tab2.tab-pane
-          - if @user.microposts.any?
-            %ol.microposts
-              = render @microposts
-            = will_paginate @microposts
