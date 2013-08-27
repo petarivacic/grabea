@@ -8,6 +8,8 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(params[:micropost])
     @micropost.name = current_user.full_name
     @hashtags = extract_hashtags(@micropost.content)
+    @cashtags = extract_cashtags(@micropost.content)
+    @micropost.name = @cashtags[0]
     @micropost.save
 
     if @micropost.save
@@ -24,7 +26,6 @@ class MicropostsController < ApplicationController
       render 'static_pages/home'
     end
   end
-
 
   def destroy
   
