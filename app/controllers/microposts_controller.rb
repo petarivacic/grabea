@@ -5,11 +5,19 @@ class MicropostsController < ApplicationController
   end
 
   def create
-  	@micropost = current_user.microposts.build(params[:micropost])
+    @micropost = current_user.microposts.build(params[:micropost])
     @micropost.name = current_user.full_name
-    
+    @hashtags = extract_hashtags(@micropost.content)
+    @micropost.save
+
     if @micropost.save
       flash[:success] = "Micropost created!"
+      @hashtags.each do |i|
+        tag = Tag.new
+        tag.name = i
+        tag.micropost_id = @micropost.id
+        tag.save
+      end
       redirect_to :back
     else
       @feed_items = []
