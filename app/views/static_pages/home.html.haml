@@ -1,15 +1,15 @@
 - if signed_in?
   .row
-    %aside.span4
+    %feed.span7
+      = render 'shared/feed'
+    %aside.span4.pull-right
       %section
         = render 'shared/user_info'
       %section
         = render 'shared/stats'
       %section
         = render 'shared/micropost_form'
-    .span8
-      %h3 Activity
-      = render 'shared/feed'
+
 - else
   - provide(:title, 'Home')
   .center.hero-unit

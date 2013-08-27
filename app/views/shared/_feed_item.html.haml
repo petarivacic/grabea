@@ -1,17 +1,31 @@
-%li{:id => feed_item.id}
-  .row
-    %span.span1
-      = image_tag feed_item.user.gravatar_url, style: "width: 50px; height: 50px;",  class: "img-rounded"
-      <br>
-    %span.user
+.feed_item.row
+  %span.feed_item_photo
+    = image_tag feed_item.user.gravatar_url, style: "width: 50px; height: 50px;",  class: "img-rounded"
+  %strong.feed_item_title
+    %span
       = link_to feed_item.user.full_name, feed_item.user
-      %span.content= feed_item.content
-    %span.muted.small
-      Posted #{time_ago_in_words(feed_item.created_at)} ago.
-      = link_to "Like(#{feed_item.likes.size})", {:controller =>"microposts", :action => "upvote", :id => feed_item.id}, :class => 'btn btn-link', method: :put
-      = link_to "Dislike(#{feed_item.dislikes.size})", {:controller =>"microposts", :action => "downvote", :id => feed_item.id}, :class => 'btn btn-link', method: :put
-    - if current_user?(feed_item.user)
-      = link_to "Delete", feed_item, method: :delete, |
-        :class => 'btn btn-link',                     |
-        data: { confirm: "You sure?" },               |
-        title: feed_item.content                      |
+    %span
+      posted new idea
+    %span
+      = feed_item.name
+    %spanPosted Posted #{time_ago_in_words(feed_item.created_at)} ago.
+  %span.row.feed_item_content
+    %span= feed_item.content
+    %span
+      (More)
+  %span.row.feed_item_actions
+    %span
+      = link_to "Like(#{feed_item.likes.size})", {:controller =>"microposts", :action => "upvote", :id => feed_item.id}, method: :put
+    %span
+      • 
+    %span
+      = link_to "Dislike(#{feed_item.dislikes.size})", {:controller =>"microposts", :action => "downvote", :id => feed_item.id},  method: :put
+    %span
+      • 
+    %span
+      %a Comment
+    %span
+      • 
+    %span
+      %a Share
+    

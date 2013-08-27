@@ -1,14 +1,16 @@
 class MicropostsController < ApplicationController
+  include Twitter::Extractor
 
   def index
   end
 
   def create
   	@micropost = current_user.microposts.build(params[:micropost])
+    @micropost.name = current_user.full_name
     
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_url
+      redirect_to :back
     else
       @feed_items = []
       render 'static_pages/home'

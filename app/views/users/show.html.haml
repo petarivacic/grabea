@@ -1,16 +1,15 @@
 - provide(:title, @user.full_name)
-.row
-  %aside.span4
+
+%section.fourteen.columns
+  %article.valign.row
     =render 'users/user_info'
-    =render 'users/tagline'
-   
-    %section
-      = render 'shared/stats'
-    %section
-      %strong Skills:
-      %div
-        = render @skills
-  %bside.span8
+
+    /=render 'users/tagline'
+
+.row
+
+%hr
+  .span8.pull-right
     .tabbable
       / Only required for left/right tabs
       %ul.nav.nav-pills

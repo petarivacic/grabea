@@ -1,6 +1,13 @@
-.well
-  = form_for(@skill) do |f|
-    = render 'shared/error_messages', object: f.object
-    .field
-      = f.input :skill_type, placeholder: "Skill"
-    = f.submit "Post", class: "btn btn-info"
+%button.pure-button A Pure Button
+
+%form.pure-form
+  %fieldset.pure-group
+    %input.pure-input-1-2{:placeholder => "Username", :type => "text"}/
+    %input.pure-input-1-2{:placeholder => "Password", :type => "text"}/
+    %input.pure-input-1-2{:placeholder => "Email", :type => "email"}/
+    %input.pure-input-1-2{:placeholder => "Another Group", :type => "text"}/
+    %input.pure-input-1-2{:placeholder => "More Stuff", :type => "text"}/
+  %button.pure-button.pure-input-1-2.pure-button-primary{:type => "submit"} Sign in
+
+
+

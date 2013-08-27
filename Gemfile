@@ -10,6 +10,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'haml'
 gem 'acts_as_votable'
+gem 'twitter-text'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

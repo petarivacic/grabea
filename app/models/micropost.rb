@@ -1,7 +1,9 @@
 class Micropost < ActiveRecord::Base
+  include Twitter::Extractor
 
   attr_accessible :content
   belongs_to :user
+  has_many :tags
 
   validates :content, presence: true, length: { maximum: 140 }
   validates :user_id, presence: true
