@@ -1,43 +1,27 @@
 - provide(:title, @user.full_name)
 
-%section.fourteen.columns
-  %article.valign.row
+%section.container
+  %article
     =render 'users/user_info'
-
-    /=render 'users/tagline'
-
 .row
-
-%hr
   .span8.pull-right
-    .tabbable
-      / Only required for left/right tabs
-      %ul.nav.nav-pills
-        %li.active
-          %a{"data-toggle" => "tab", :href => "#tab1"} Activity(#{@user.microposts.count})
-        %li
-          %a{"data-toggle" => "tab", :href => "#tab2"} Background
-            
 
-      .tab-content
-        #tab1.tab-pane.active
-          - if @user.microposts.any?
-            %ol.microposts
-              = render @microposts
-            = will_paginate @microposts    
-        #tab2.tab-pane
-          %bio
+    .tab-content
+      #tab1.tab-pane.active
+        - if @user.microposts.any?
+          %ol.microposts
+            = render @microposts
+          = will_paginate @microposts    
+      #tab2.tab-pane
+        
+        %bio.container
           %strong Bio:
           .bio= @user.bio
-          
-          %hr/
-          
-          %education
-            %strong Education:
-            %div= render @educations
-          %hr/
-          
-          %experience 
-            %strong Experience:
-            %ul= render @experiences
+        
+        %education.container
+          %strong Education:
+          %div= render @educations
+        %experience.container 
+          %strong Experience:
+          %ul= render @experiences
 

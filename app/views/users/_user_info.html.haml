@@ -1,9 +1,16 @@
-%section
-  %a{:href => user_path(@user)}
-    = gravatar_for @user, size: 52
-  %h1
-    = @user.full_name
-  %span
-    /= pluralize(@user.microposts.count, "idea")
-  = render 'follow_form'
+%section.well.container
+	%a{:href => user_path(@user)}
+		= gravatar_for @user, size: 52
+	%span.container
+		
+		%h3
+			= @user.full_name
+		%section.tabbable
+			%ul.nav.nav-pills
+				%li.active
+					%a{"data-toggle" => "tab", :href => "#tab1"} Activity(#{@user.microposts.count})
+				%li
+					%a{"data-toggle" => "tab", :href => "#tab2"} Background
+
+		= render 'follow_form'
   

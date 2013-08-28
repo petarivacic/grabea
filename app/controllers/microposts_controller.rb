@@ -25,6 +25,13 @@ class MicropostsController < ApplicationController
       @feed_items = []
       render 'static_pages/home'
     end
+    puts "I AM HERE"
+    if  @micropost.name != nil 
+      puts "micropost has name"
+      @post = Post.new
+      @post.content = @micropost.content
+      @post.save
+    end
   end
 
   def destroy
