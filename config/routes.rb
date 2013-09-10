@@ -13,15 +13,15 @@ Wjobs::Application.routes.draw do
 
   devise_for :users
   resources :users do
+
     member do
       get :following, :followers
     end
   end
 
   resources :posts
-  
-
-  match '/help',    to: 'static_pages#help'
+ 
+  match '/edit',    to: 'users#editbio'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
@@ -30,7 +30,7 @@ Wjobs::Application.routes.draw do
   
   resources :relationships, only: [:create, :destroy]
 
-
+  
   get "static_pages/help"
   get "static_pages/about"
   get "static_pages/contact"

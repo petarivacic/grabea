@@ -1,0 +1,17 @@
+%h1 Hello
+
+%ul.nav.nav-list.container.span2
+	%li.nav-header List header
+	%li.active
+		%a{:href => "#"} Education
+	%li
+		%a{:href => "#"} Experience
+	%li
+		%a{:href => "#"} Bio
+
+.container
+	.field
+	= form_for(:user) do |f|
+		= f.text_field :first_name, placeholder: "First Name", class: ""
+		= f.text_area :bio, placeholder: "Your Bio...", class: "text"
+		= f.submit "Post", class: "medium default btn"

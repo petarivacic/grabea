@@ -1,0 +1,20 @@
+%ul.nav.nav-list.container.span2
+	%li.nav-header List header
+	%li.active
+		%a{:href => "#"} Education
+	%li
+		%a{:href => "#"} Experience
+	%li
+		%a{:href => "#"} Bio
+
+.container
+	.field
+	= form_for(@user) do |f|
+		= render 'shared/error_messages', object: f.object
+	.field
+		= f.text_area :bio, placeholder: "Post your idea in 140 charachters or less. @toNameAndGroupYourIdeas #toTagYourIdeas ", class: "text"
+		= f.submit "Post", class: "medium default btn"
+	
+
+
+  

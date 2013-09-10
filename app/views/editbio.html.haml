@@ -1,14 +1,7 @@
-%p= @current_user.id
-%p= @current_user.full_name
-%p= @current_user.email
-%p= @current_user.bio
 
 .field
-  = form_for(@user) do |f|
+  = form_for(@user, :url => { :action => 'update', :id => @user.id}) do |f|
     .field
       = f.text_area :bio, placeholder: "Your Bio", class: "text"
     = f.submit "Post", class: "medium default btn"
-
-
-
-
+	

@@ -1,4 +1,9 @@
 - if @feed_items.any?
-  .microposts
-    = render partial: 'shared/feed_item', collection: @feed_items
-  = will_paginate @feed_items
+	.microposts
+		= render partial: 'shared/feed_item', collection: @feed_items
+- else 
+	%h2 Your feed is empty. 
+	%h2= link_to "Find people to follow", users_path
+	%h2 or post an idea...
+
+	

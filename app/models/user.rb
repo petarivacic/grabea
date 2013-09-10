@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :profile_name, :tag_line, :bio
 
   acts_as_voter
-  has_many :posts
+  
   has_many :microposts, dependent: :destroy
   has_many :skills, dependent: :destroy
   has_many :educations

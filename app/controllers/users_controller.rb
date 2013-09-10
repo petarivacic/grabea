@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
- before_filter :authenticate_user!, only: [:index, :edit, :update, :following, :followers]
+ before_filter :authenticate_user!, only: [:index, :editbio, :edit, :update, :following, :followers]
 #before_filter :signed_in_user, 
  #               only: [:index, :edit, :update, :following, :followers]
 
@@ -36,6 +36,19 @@ def followers
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
  end
+
+def update
+    @user = current_user
+    @user.update_attributes(params[:user])
+    redirect_to users_path
+end
+
+def editbio
+    @user = User.find(current_user.id)
+end
+
+
+
 
  private
 

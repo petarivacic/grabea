@@ -1,26 +1,18 @@
 - if signed_in?
-  .row
-    %feed.span7
-      = render 'shared/feed'
-    %aside.span4.pull-right
-      %section
-        = render 'shared/user_info'
-      %section
-        = render 'shared/stats'
-      %section
-        = render 'shared/micropost_form'
-
+	.row.container
+		%aside.span4
+			%br
+			%section
+				= render 'shared/user_info'
+			%section
+				= render 'shared/stats'
+			%section
+				= render 'shared/micropost_form'
+		%feed.span5.offset2
+			= render 'shared/feed'
 - else
-  - provide(:title, 'Home')
-  .center.hero-unit
-    %h1 Open to Any Idea. 
-    %h2 Discover Inspiration. Spark Creativity. Share Ideas. Get Feedback. Connect   
-    = link_to "Test Our Demo Site", new_user_registration_path, class: "btn btn-large btn-info"
-
-
-
-
-
-
-
-
+	- provide(:title, 'Home')
+	.center.hero-unit
+		%h1 Open to Any Idea. 
+		%h2 Discover Inspiration. Spark Creativity. Share Ideas. Get Feedback. Connect   
+		= link_to "Check it out", new_user_registration_path, class: "btn btn-large btn-info"

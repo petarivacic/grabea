@@ -1,0 +1,13 @@
+
+<%= simple_form_for(:user, :url => {:action => "create"} )
+
+
+<ul class="four columns">
+<li class="field"><%= f.input :first_name%></li>
+<li class="field"><%= f.input :last_name %></li>
+<li class="field"><%= f.input :email %></li>
+<li class="field"><%= f.input :password %></li>
+
+<%= f.button :submit, "Update", class: "medium secondary btn" %>
+<ul>
+<% end %>
