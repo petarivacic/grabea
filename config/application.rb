@@ -65,6 +65,7 @@ module Wjobs
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.initialize_on_precompile = false 
+    config.secret_key = 'f9aca3de22411a76705955e8f168fa8a9212100e8b1d3fa4841e950d00986de0e9c816a4f833541aba775da5a642f97a32c06825a4269f0ebddb37055f73bec5'
 
   end
 end

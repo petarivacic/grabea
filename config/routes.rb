@@ -1,5 +1,8 @@
 Wjobs::Application.routes.draw do
   
+  resources :questions
+
+
   get "users/show"
   
   resources :microposts do

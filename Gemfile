@@ -11,6 +11,7 @@ gem 'bootstrap-will_paginate'
 gem 'haml'
 gem 'acts_as_votable'
 gem 'twitter-text'
+gem 'therubyracer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

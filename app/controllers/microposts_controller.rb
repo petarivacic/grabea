@@ -1,15 +1,21 @@
 class MicropostsController < ApplicationController
   include Twitter::Extractor
 
+  def new
+    @question
+    @micropost = Micropost.new
+    
+  end
+
   def index
   end
 
   def create
     @micropost = current_user.microposts.build(params[:micropost])
-    @micropost.name = current_user.full_name
     @hashtags = extract_hashtags(@micropost.content)
     @cashtags = extract_cashtags(@micropost.content)
-    @micropost.name = @cashtags[0]
+    @micropost.name = Question.last
+    
     @micropost.save
 
     if @micropost.save

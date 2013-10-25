@@ -2,5 +2,6 @@
   = form_for(@micropost) do |f|
     = render 'shared/error_messages', object: f.object
     .field
-      = f.text_area :content, placeholder: "Post your idea in 140 charachters or less. @toNameAndGroupYourIdeas #toTagYourIdeas ", class: "text"
+      = f.text_area :content, placeholder: "Type your answer here or press skip question if you're not sure. Use #Help if you need help", class: "text"
     = f.submit "Post", class: "medium default btn"
+    = f.submit "Skip", class: "medium default btn"

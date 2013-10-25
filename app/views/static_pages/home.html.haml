@@ -3,11 +3,13 @@
 		%aside.span4
 			%br
 			%section
-				= render 'shared/user_info'
+				%h1
+				Learn RUBY
 			%section
-				= render 'shared/stats'
+				= @question.que
 			%section
 				= render 'shared/micropost_form'
+				
 		%feed.span5.offset2
 			= render 'shared/feed'
 - else

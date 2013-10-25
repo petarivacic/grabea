@@ -5,25 +5,28 @@
     %span
       = link_to feed_item.user.full_name, feed_item.user
     %span
-      posted new idea
+      answered a question
     %span
-      = feed_item.name
-    %spanPosted Posted #{time_ago_in_words(feed_item.created_at)} ago.
+      
+  %span #{time_ago_in_words(feed_item.created_at)} ago.
   %span.row.feed_item_content
+    %strong 
+      = feed_item.name
+    %br
     %span= feed_item.content
     %span
       (More)
   %span.row.feed_item_actions
     %span
-      = link_to "Like(#{feed_item.likes.size})", {:controller =>"microposts", :action => "upvote", :id => feed_item.id}, method: :put
+      = link_to "Like.it(#{feed_item.likes.size})", {:controller =>"microposts", :action => "upvote", :id => feed_item.id}, method: :put
     %span
       • 
     %span
-      = link_to "Dislike(#{feed_item.dislikes.size})", {:controller =>"microposts", :action => "downvote", :id => feed_item.id},  method: :put
+      = link_to "Boo.it(#{feed_item.dislikes.size})", {:controller =>"microposts", :action => "downvote", :id => feed_item.id},  method: :put
     %span
       • 
     %span
-      %a Comment
+      %a Correct
     %span
       • 
     %span
